@@ -23,7 +23,7 @@ from cldm.ddim_hacked import DDIMSampler
 preprocessor = None
 
 model_name = 'controlnetxlCNXL_bdsqlszLineart'
-model = create_model(f'./models/{model_name}.safetensors').cpu()
+model = create_model(f'./models/control_v11p_sd15s2_lineart_anime.yaml').cpu()
 model.load_state_dict(load_state_dict('./models/anything-v3-full.safetensors', location='cuda'), strict=False)
 model.load_state_dict(load_state_dict(f'./models/{model_name}.safe', location='cuda'), strict=False)
 model = model.cuda()
